@@ -18,13 +18,13 @@ First step of cleaning was getting rid of any blank cells in the column I wanted
 
 `word <- df %>%`
 
-  `filter (Consumer.complaint.narrative != '')`
+    `filter (Consumer.complaint.narrative != '')`
   
 The next step in cleaning was to make each word its own cell:
 
 `row_words <- word %>%`
 
- ` mutate(Consumer.complaint.narrative = str_split(Consumer.complaint.narrative, "\\s+"))`
+   ` mutate(Consumer.complaint.narrative = str_split(Consumer.complaint.narrative, "\\s+"))`
 
 `row_words<- unnest(row_words, Consumer.complaint.narrative)`
 
@@ -32,11 +32,11 @@ The next step was to make everything lower case and get rid of any punctuations 
 
 `clean_text <- function(text){`
 
-  `clean_text <- gsub('[[punct:]]', '', text)`
+    `clean_text <- gsub('[[punct:]]', '', text)`
   
-  `clean_text <- tolower(clean_text)`
+    `clean_text <- tolower(clean_text)`
  
-  `return(clean_text)`
+    `return(clean_text)`
 
 `}`
 
@@ -46,7 +46,7 @@ Then put the data through the function:
 
 `row_words <- row_words%>%`
   
-  `filter(Consumer.complaint.narrative != '')`
+    `filter(Consumer.complaint.narrative != '')`
   
 ## Analysis
 ### Top Twenty NRC Negative Words
