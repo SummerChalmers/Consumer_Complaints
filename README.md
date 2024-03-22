@@ -31,28 +31,28 @@ row_words <- row_words%>%
   filter(Consumer.complaint.narrative != '')`
   
 ## Analysis
-Top Twenty NRC Negative Words
+### Top Twenty NRC Negative Words
 <div align = "center">
 <img src = "https://github.com/SummerChalmers/Consumer_Complaints/blob/main/top20NRC.png" width = "700">
 </div>
-  -This bar chart shows the top 20 negavtive words and how oftne they were used.
+  *This bar chart shows the top 20 negavtive words and how oftne they were used.
 
 
-Top Twenty Bing Negavive Words
+### Top Twenty Bing Negavive Words
 <div align = "center">
 <img src = "https://github.com/SummerChalmers/Consumer_Complaints/blob/main/top20Bing.png" width = "700")>
 </div>
-  -This bar chart shows the top 20 negative words and how often they were used.
+  *This bar chart shows the top 20 negative words and how often they were used.
 
 
-Word Cloud Top Twenty NRC Negative Words
+### Word Cloud Top Twenty NRC Negative Words
 <div align = "center">
 <img src = "https://github.com/SummerChalmers/Consumer_Complaints/blob/main/wordcloudNRC.png" width = "700")>
 </div>
-  -This word cloud shows what word is used the most in the NRC database.
+  *This word cloud shows what word is used the most in the NRC database.
 
 
-Word Cloud Top Twenty Bing Negative Words
+### Word Cloud Top Twenty Bing Negative Words
 <div align = "center">
 <img src = "https://github.com/SummerChalmers/Consumer_Complaints/blob/main/wordcloudBing.png" width = "700")>
 </div>
