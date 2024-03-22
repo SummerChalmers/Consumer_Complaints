@@ -13,6 +13,7 @@ Source: https://www.tidytextmining.com/sentiment.html
 
 ## Data Cleaning
 First step of cleaning was getting rid of any blank cells in the column I wanted data from: 
+
 `word <- df %>%
   filter (Consumer.complaint.narrative != '')
 The next step in cleaning was to make each word its own cell:
@@ -21,6 +22,7 @@ row_words <- word %>%
 row_words<- unnest(row_words, Consumer.complaint.narrative)`
 
 The next step was to make everything lower case and get rid of any punctuations through a function:
+
 `clean_text <- function(text){
   clean_text <- gsub('[[punct:]]', '', text)
   clean_text <- tolower(clean_text)
@@ -28,6 +30,7 @@ The next step was to make everything lower case and get rid of any punctuations 
 }`
 
 Then put the data through the function:
+
 `row_words$Consumer.complaint.narrative <- clean_text(row_words$Consumer.complaint.narrative)
 row_words <- row_words%>%
   filter(Consumer.complaint.narrative != '')`
