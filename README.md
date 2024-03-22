@@ -8,7 +8,9 @@ Given a csv file, able to clean, manipulate, and analyze data for the top twenty
 
 ## Dictionary
 NRC - "Categorizes words in a binary fashion (“yes”/“no”) into categories of positive, negative, anger, anticipation, disgust, fear, joy, sadness, surprise, and trust."
+
 BING - "Categorizes words in a binary fashion into positive and negative categories."
+
 Source: https://www.tidytextmining.com/sentiment.html
 
 ## Data Cleaning
