@@ -13,12 +13,12 @@ Source: https://www.tidytextmining.com/sentiment.html
 
 ## Data Cleaning
 First step of cleaning was getting rid of any blank cells in the column I wanted data from: 
-word <- df %>%
+/word <- df %>%
   filter (Consumer.complaint.narrative != '')
 The next step in cleaning was to make each word its own cell:
 row_words <- word %>%
   mutate(Consumer.complaint.narrative = str_split(Consumer.complaint.narrative, "\\s+"))
-row_words<- unnest(row_words, Consumer.complaint.narrative)
+row_words<- unnest(row_words, Consumer.complaint.narrative)/
 The next step was to make everything lower case and get rid of any punctuations through a function:
 clean_text <- function(text){
   clean_text <- gsub('[[punct:]]', '', text)
@@ -35,19 +35,22 @@ Top Twenty NRC Negative Words
 <div align = "center">
 <img src = "https://github.com/SummerChalmers/Consumer_Complaints/blob/main/top20NRC.png" width = "700">
 </div>
-This bar chart shows the top 20 negavtive words and how oftne they were used.
+  -This bar chart shows the top 20 negavtive words and how oftne they were used.
+
 
 Top Twenty Bing Negavive Words
 <div align = "center">
 <img src = "https://github.com/SummerChalmers/Consumer_Complaints/blob/main/top20Bing.png" width = "700")>
 </div>
-This bar chart shows the top 20 negative words and how often they were used.
+  -This bar chart shows the top 20 negative words and how often they were used.
+
 
 Word Cloud Top Twenty NRC Negative Words
 <div align = "center">
 <img src = "https://github.com/SummerChalmers/Consumer_Complaints/blob/main/wordcloudNRC.png" width = "700")>
 </div>
-This word cloud shows what word is used the most in the NRC database.
+  -This word cloud shows what word is used the most in the NRC database.
+
 
 Word Cloud Top Twenty Bing Negative Words
 <div align = "center">
